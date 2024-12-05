@@ -7,7 +7,9 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <AppRoutes />
+      <div className='bg-slate-200 '>
+        <AppRoutes />
+      </div>
     </Router>
   );
 };
