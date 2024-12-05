@@ -1,9 +1,11 @@
 import MyForm from "../components/Contacto"
+import HomeSection from "../components/Home-section"
 
 const Home= () => {
    return (
       <div className="pt-16">
-         <div className="h-screen w-full">
+         <div className="w-full">
+            <HomeSection/>
             <MyForm/>
          </div>
       </div>

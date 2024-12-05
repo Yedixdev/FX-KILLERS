@@ -12,7 +12,6 @@ const MyForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validación simple de correo
     if (!email) {
       setMessage("Por favor, ingresa tu correo.");
       return;
@@ -51,7 +50,6 @@ const MyForm = () => {
         <span className="contact-home-highlight">Mantente</span> en contacto
       </div>
 
-      {/* Mensaje de éxito o error */}
       {message && (
         <div
           className={`${
@@ -77,7 +75,7 @@ const MyForm = () => {
           className={`contact-btn-form-home px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 ${
             isSubmitting ? "opacity-50 cursor-not-allowed" : ""
           }`}
-          disabled={isSubmitting} // Deshabilitar el botón durante el envío
+          disabled={isSubmitting} 
         >
           {isSubmitting ? "Enviando..." : "Suscribirme"}
         </button>
