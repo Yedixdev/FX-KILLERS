@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaYoutube, FaInstagram, FaDiscord } from 'react-icons/fa'; 
 
 const MobileMenu = () => { 
 
@@ -19,10 +20,41 @@ const MobileMenu = () => {
          </Link>
          <Link
             to="/contacto"
-            className="bg-black text-gray-100 px-8 py-1 rounded-full font-medium hover:bg-yellow-600 hover:text-black transition duration-300 shadow-lg shadow-gray-800 hover:shadow-black transform hover:scale-110"
+            className="bg-yellow-600 text-gray-100 px-8 py-1 rounded-full font-medium hover:bg-black transition duration-300 shadow-md shadow-gray-800 hover:shadow-black"
           >
             Contactanos
          </Link>
+         <div className='flex gap-10 justify-center items-center'>
+            <a
+               href="https://www.youtube.com/@babyivanfx"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-green1 hover:text-yellow-600 text-3xl transition duration-300 transform hover:scale-150"
+               >
+               <FaYoutube/>
+            </a>
+            <a
+               href="https://www.instagram.com/babyivanfx/"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-green1 hover:text-yellow-600 text-3xl transition duration-300 transform hover:scale-150"
+               >
+               <FaInstagram/> 
+            </a>
+            <a
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-green1 hover:text-yellow-600 text-3xl transition duration-300 transform hover:scale-150"
+               >
+               <FaDiscord/>
+            </a>
+            
+          
+         </div>
+         
+         
+         
       </nav>
    )
 }
