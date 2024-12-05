@@ -16,8 +16,8 @@ const Header = () => {
 
   const navItems = [
     { name: 'Inicio', path: '/home' },
-    { name: 'Comunidad Premium', path: '/comunidad-premium' },
-    { name: 'Preguntas Frecuentes', path: '/preguntas-frecuentes' },
+    { name: 'Suscripciones', path: '/comunidad-premium' },
+    { name: 'FAQ', path: '/preguntas-frecuentes' },
   ];
 
   const navIcons = [
@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="w-full fixed bg-gradient-green h-16 flex justify-between items-center px-8 shadow-lg shadow-gray-900"
+      className="w-full fixed bg-gradient-green h-16 flex justify-between items-center px-8 shadow-lg shadow-gray-900  z-50"
       initial={{ opacity: 0, y: -30 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8 }} 
@@ -73,31 +73,31 @@ const Header = () => {
       </motion.nav>
 
       <div className="flex gap-6 items-center">
-        <motion.div
-          className="hidden lg:flex gap-4 items-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        >
-          {navIcons.map((item, index) => (
-            <motion.a
-              key={item.href}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-600 hover:text-yellow-100 text-2xl transition duration-300 transform hover:scale-150 mr-5"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 + 0.2 * index }}
-            >
-              {item.icon}
-            </motion.a>
-          ))}
+          <motion.div
+            className="hidden lg:flex gap-4 items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            {/* {navIcons.map((item, index) => (
+              <motion.a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-600 hover:text-yellow-100 text-2xl transition duration-300 transform hover:scale-150 "
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 1.2 + 0.2 * index }}
+              >
+                {item.icon}
+              </motion.a>
+            ))} */}
 
           <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 1.4 }}>
+          transition={{ duration: 1, delay: 1.4 }}>
             <Link
             to="/contacto"
             className="bg-black text-gray-100 px-5 py-2 font-display rounded-full font-light hover:bg-yellow-600 hover:text-black transition duration-300 shadow-lg shadow-green1 hover:shadow-black transform hover:scale-110"
