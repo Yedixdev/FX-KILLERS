@@ -1,6 +1,6 @@
 const Preguntas = () => {
    return (
-      <div>
+      <div className="pt-16">
          <div>Preguntas Frecunetes</div>
       </div>
    )

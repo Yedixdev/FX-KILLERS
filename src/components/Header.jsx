@@ -28,12 +28,11 @@ const Header = () => {
 
   return (
     <motion.header
-      className="w-full bg-gradient-green h-16 flex justify-between items-center px-8 shadow-lg shadow-gray-900"
+      className="w-full fixed bg-gradient-green h-16 flex justify-between items-center px-8 shadow-lg shadow-gray-900"
       initial={{ opacity: 0, y: -30 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8 }} 
     >
-      {/* Logo con animación de deslizamiento desde la izquierda */}
       <motion.div
         className="text-gold text-3xl font-serif tracking-wider"
         initial={{ opacity: 0, x: -50 }} 
@@ -45,7 +44,6 @@ const Header = () => {
         </Link>
       </motion.div>
 
-      {/* Menú de navegación */}
       <motion.nav
         className="hidden lg:flex gap-10"
         initial={{ opacity: 0, y: -30 }} 
@@ -57,7 +55,7 @@ const Header = () => {
             key={item.path}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 + 0.2 * index }} // Retraso secuencial
+            transition={{ duration: 0.6, delay: 0.6 + 0.2 * index }} 
           >
             <Link
               to={item.path}
@@ -74,7 +72,6 @@ const Header = () => {
         ))}
       </motion.nav>
 
-      {/* Iconos sociales y el botón "Contáctanos" */}
       <div className="flex gap-6 items-center">
         <motion.div
           className="hidden lg:flex gap-4 items-center"
@@ -103,15 +100,12 @@ const Header = () => {
           transition={{ duration: 0.5, delay: 1.4 }}>
             <Link
             to="/contacto"
-            className="bg-black text-gray-100 px-5 py-2 rounded-full font-medium hover:bg-yellow-600 hover:text-black transition duration-300 shadow-lg shadow-green1 hover:shadow-black transform hover:scale-110"
-          >
-            Contáctanos
-          </Link>
+            className="bg-black text-gray-100 px-5 py-2 font-display rounded-full font-light hover:bg-yellow-600 hover:text-black transition duration-300 shadow-lg shadow-green1 hover:shadow-black transform hover:scale-110"
+            >
+              Contáctanos
+            </Link>
           </motion.div>
-          
         </motion.div>
-
-        {/* Menú móvil */}
         <div className="lg:hidden">
           <div onClick={toggleMenu} className="cursor-pointer">
             <motion.div
@@ -136,7 +130,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       {isOpen && <MobileMenu />}
     </motion.header>
   );

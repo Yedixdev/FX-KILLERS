@@ -10,3 +10,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.contact-home-highlight {
+   background: linear-gradient(90deg, #EAB642, #C7A17C, #EFDAB8, #EAB642); /* Gradiente con los colores proporcionados */
+   background-size: 200% 100%; /* Hace que el gradiente se mueva */
+   -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+   color: transparent; /* Hace que el texto sea transparente para solo ver el gradiente */
+   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Sombra suave inicial */
+   display: inline-block; /* Asegura que el texto se pueda animar correctamente */
+   animation: gradientEffect 4s ease-in-out infinite, shadowEffect 4s ease-in-out infinite; /* Animaciones combinadas */
+ }
+ 
+ /* Animación de gradiente */
+ @keyframes gradientEffect {
+   0% {
+     background-position: 200% 0%; /* El gradiente comienza desde la derecha */
+   }
+   50% {
+     background-position: 0% 0%; /* El gradiente se mueve completamente */
+   }
+   100% {
+     background-position: 200% 0%; /* El gradiente regresa a la posición inicial */
+   }
+ }
+ 
+ @keyframes shadowEffect {
+   0% {
+     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
+   }
+   50% {
+     text-shadow: 8px 8px 20px rgba(0, 0, 0, 0.8); 
+   }
+   100% {
+     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
+   }
+ }
+
+ .contact-btn-form-home {
+   background: linear-gradient(90deg, #EAB642, #C7A17C, #EFDAB8, #EAB642);
+   background-size: 200% 100%; 
+   color: #333333; 
+   font-size: 18px;
+   font-weight: 700;
+   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
+   animation: gradientEffect 4s ease-in-out infinite, shadowEffect 4s ease-in-out infinite; 
+ }
+ 
+ @keyframes gradientEffect {
+   0% {
+     background-position: 200% 0%; 
+   }
+   50% {
+     background-position: 0% 0%; 
+   }
+   100% {
+     background-position: 200% 0%; 
+   }
+ }
+ 
+ 

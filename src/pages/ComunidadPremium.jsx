@@ -1,6 +1,6 @@
 const Subscription= () => {
    return (
-      <div>
+      <div className="pt-16">
          <div> Subscription</div>
       </div>
    )

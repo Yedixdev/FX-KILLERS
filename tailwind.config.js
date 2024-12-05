@@ -8,6 +8,7 @@ export default {
         green1: "#135A3A", //verde claro
         green2: "#012b20", //verde oscuro
         gray1: "#EAEAEA", //gris del fondo
+        gray2: "#333333", //gris para textos oscuros
         yellow1: "#EAB642", //amarillo para algunos botones
         beige1: "#C7A17C", //Marron letras
         beige2: "#EFDAB8", //Marron claro para botones
@@ -18,7 +19,7 @@ export default {
       },
       //Esta tipografia son las que vamos a usar bro
       fontFamily: {
-        display: ['"Playfair Display"', "serif"], //creo que no va pero ahi miramos si queda bien
+        display: ["Playfair Display", "serif"], //creo que no va pero ahi miramos si queda bien
         robo: ["Roboto", "sans-serif"], //font-robo para titulos
         poppins: ["Poppins", "sans-serif"], //font-poppins para cuerpo de texto(parrafos)
       },

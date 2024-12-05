@@ -2,9 +2,9 @@ import MyForm from "../components/Contacto"
 
 const Home= () => {
    return (
-      <div>
+      <div className="pt-16">
          <div className="h-screen w-full">
-            {/* <MyForm/> */}
+            <MyForm/>
          </div>
       </div>
    )
